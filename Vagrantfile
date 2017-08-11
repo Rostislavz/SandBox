@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
 
    config.vm.define :host1 do |host1|
 
-    host1.vm.network "private_network", ip: "192.168.7.11",
+    host1.vm.network "private_network", ip: "192.168.2.21",
     
       virtualbox__intnet: "vlan2"
 
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
 
    config.vm.define :host2 do |host2|
 
-    host2.vm.network "private_network", ip: "192.168.7.12",
+    host2.vm.network "private_network", ip: "192.168.2.22",
   
       virtualbox__intnet: "vlan2"
 
@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
 
    config.vm.define :host3 do |host3|
 
-    host3.vm.network "private_network", ip: "192.168.7.13",
+    host3.vm.network "private_network", ip: "192.168.3.33",
    
       virtualbox__intnet: "vlan3"
 
@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
 
    config.vm.define :host4 do |host4|
 
-    host4.vm.network "private_network", ip: "192.168.7.14",
+    host4.vm.network "private_network", ip: "192.168.3.34",
     
       virtualbox__intnet: "vlan3"
 
@@ -63,7 +63,22 @@ Vagrant.configure("2") do |config|
     host4.vm.hostname = "host4.local"
 
    end
+  
 
+  config.vm.define :host5 do |host5|
+
+    host5.vm.network "private_network", ip: "192.168.2.25",
+    
+      virtualbox__intnet: "vlan2"
+    
+    host5.vm.network "private_network", ip: "192.168.3.35",
+    
+      virtualbox__intnet: "vlan3"
+
+
+    host5.vm.hostname = "host5.local"
+
+   end
 
 
 end
