@@ -1,3 +1,30 @@
+$innagios = <<SCRIPT
+sudo rpm -ivh http://ftp-stud.hs-esslingen.de/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+sudo yum update
+cd tmp
+wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-3.5.1.tar.gz
+sudo yum install -y wget httpd php gcc glibc glibc-common gd gd-devel make net-snmp
+sudo useradd nagios
+sudo groupadd nagcmd
+sudo usermod -a -G nagcmd nagios
+sudo tar -xvzf nagios-3.5.1.tar.gz
+cd nagios
+sudo ./configure --with-command-group=nagcmd
+sudo make all
+sudo make install
+sudo make install-init
+sudo make install-config
+sudo make install-commandmode
+sudo make install-webconf
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+sudo /etc/init.d/nagios start /etc/init.d/httpd start
+sudo yum install nagios-plugins-all -y
+sudo rm -rf /usr/local/nagios/libexec
+cd /usr/local/nagios/
+sudo ln -s /usr/lib64/nagios/plugins/ libexec
+sudo chown nagios:nagios -R libexec
+
+SCRIPT
 
 Vagrant.configure("2") do |config|
 
