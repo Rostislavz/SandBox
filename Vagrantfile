@@ -67,6 +67,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.define :host5 do |host5|
 
+  	host5.vm.box = "centos/6"
+  	host5.vm.box_url = "centos/6"
+  	
     host5.vm.network "private_network", ip: "192.168.2.25",
     
       virtualbox__intnet: "vlan2"
