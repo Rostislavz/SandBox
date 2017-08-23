@@ -2,8 +2,8 @@
 My litle network sandbox
 
 <H2> Requirements: </H2> 
-  preinstalled Vagrant
-      (https://www.vagrantup.com/)
+  <p> preinstalled Vagrant </p>
+  <p>    (https://www.vagrantup.com/) </p>
   preinstalled Virtualbox
       (https://www.virtualbox.org/wiki/Downloads)
 
