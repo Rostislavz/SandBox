@@ -39,3 +39,4 @@ Open CMD in folder with Vagrantfile
 
 * Hadoop cluster;
 
+![Octocat](https://octodex.github.com/images/octoclark-kentocat.jpg)
