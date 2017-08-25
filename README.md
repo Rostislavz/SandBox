@@ -7,8 +7,19 @@ My litle network sandbox
   2. preinstalled Virtualbox </p>
   <p>    (https://www.virtualbox.org/wiki/Downloads) </p>
 
+
 <h2> Getting started </h2>
-If you have preinstaled git (http://git-scm.com) type in commad line 
+If you have preinstaled
+
+
+[git repo](http://git-scm.com)
+
+
+type in commad line 
+
+
     
  git clone https://github.com/Rostislavz/SandBox.git
     
+
+
