@@ -9,17 +9,16 @@ My litle network sandbox
 
 
 <h2> Getting started </h2>
-If you have preinstaled
+If you have preinstalled 
+
+[GIT client](http://git-scm.com)
 
 
-[git repo](http://git-scm.com)
+<p>if you have git pre installed, then just clone this repo in folder, 
+<br>that you want, by using this command in command line </p>
 
-
-type in commad line 
-
-
-    
+```
  git clone https://github.com/Rostislavz/SandBox.git
-    
-
+```
+if not, then just download and unzip it.
 
